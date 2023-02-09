@@ -1,8 +1,32 @@
+/* Custom Properties */
+:root {
+  /* fonts */
+  --ff-sans: 'Source Sans Pro', sans-serif;
+  --ff-serif: 'Lora', serif;
+  /* colors */
+  --clr-primary-text: #5e5d5e;
+
+
+}
+
 /****** Global Styles ******/
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: grid;
+  grid-template-rows: 
+    auto
+    1fr
+    auto;
+}
 
 
-
-
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: auto;
+}
 
 
 
