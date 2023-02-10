@@ -75,6 +75,8 @@ h6 {
   isolation: isolate;
 }
 
+
+
 /****** Global Styles ******/
 body {
   min-height: 100vh;
@@ -100,10 +102,20 @@ body {
   overflow: auto;
 }
 
+/* Components and Utility Classes */
+.flex { display: flex; }
+.grid { display: grid; }
+
+/* Typography */
+
 h1, h2, h3, h4 {
   margin: 0;
   font-family: var(--ff-serif);
   line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-600);
 }
 
 
@@ -145,39 +157,82 @@ header h1 {
 
 .nav-list a {
   font-size: var(--fs-nav);
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--clr-nav-text);
 
 }
 
-.tagline {
+.tagline-heading {
   max-width: 23ch;
   padding: 1.5rem 0;
   font-size: 4.5rem;
+  color: var(--clr-heading-text);
 }
 
-
-
-
-
-
-
-
 /****** About Styles ******/
+.about .content-wrapper {
+  padding: 5rem 3rem;
+  flex-direction: column;
+  gap: 2.125rem;
+}
 
+.even-columns {
+  gap: 2rem;
+}
 
-
-
-
-
+/* .about-content p {
+  margin-inline: auto;
+  max-width: 50ch;
+} */
 
 
 
 /****** Skill Styles ******/
+.skills {
 
+  background: var(--clr-off-white);
+}
 
+.skills .content-wrapper {
+  padding: 7rem 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.5rem;
+}
 
+.skill-columns {
+  gap: 3rem;
+}
 
+.skill-card {
+  padding: 0 1.125rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-container {
+  margin-bottom: 1.875rem;
+}
+
+.skill-card h3 {
+  margin-bottom: 1.25rem;
+}
+
+.skill-card p {
+  line-height: 1.8;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .about-content p {
+    text-align: left;
+    max-width: 50ch;
+  }
+}
 
 
 
