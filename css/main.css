@@ -3,10 +3,76 @@
   /* fonts */
   --ff-sans: 'Source Sans Pro', sans-serif;
   --ff-serif: 'Lora', serif;
+  /* font sizes */
+  /* 72px, 36px (h2), 30px, 24px, 20px, */
+  --fs-700: 2.25rem;
+  --fs-600: 1.875rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1.25rem;
+  --fs-nav: 1.125rem;
+  /* font weights */
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-400: 400;
   /* colors */
-  --clr-primary-text: #5e5d5e;
+  --clr-primary-text: #5E5D5E;
+  --clr-off-white: #F5F5F5;
+  --clr-brand: #7B7E54;
+  --clr-nav-text: #727172;
+  --clr-heading-text: #817F80;
+  --bg-header: #F9EFEF;
+  --bg-contact: #F9E9E9;
 
+}
 
+/*
+  ************* RESET *****************************
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  *************************************************
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
 }
 
 /****** Global Styles ******/
@@ -19,6 +85,12 @@ body {
     auto
     1fr
     auto;
+
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  line-height: 1.6;
+
+  color: var(--clr-primary-text);
 }
 
 
@@ -28,12 +100,61 @@ body {
   overflow: auto;
 }
 
-
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--ff-serif);
+  line-height: 1.1;
+}
 
 
 
 /****** Header Styles ******/
+.home-hero {
+  height: 60vh;
+  background-color: var(--bg-header);
+  background-image: url('../img/full-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.hero-content {
+  padding: 0 1.5rem;
+}
+
+.nav-wrapper {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: var(--fs-500);
+  color: var(--clr-brand);
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: clamp(2rem, 5vw, 5rem);
+  font-size: var(--fs-nav);
+
+}
+
+.nav-list a {
+  font-size: var(--fs-nav);
+  text-decoration: none;
+  color: var(--clr-nav-text);
+
+}
+
+.tagline {
+  max-width: 23ch;
+  padding: 1.5rem 0;
+  font-size: 4.5rem;
+}
 
 
 
