@@ -5,8 +5,9 @@
   --ff-serif: 'Lora', serif;
   /* font sizes */
   /* 36px (h2), 30px (h1), 24px, 20px, 18px */
-  --fs-700: 2.25rem;
-  --fs-600: 1.875rem;
+  --fs-tagline: 3rem;
+  --fs-700: 1.875rem;
+  --fs-600: 1.5rem;
   --fs-500: 1.5rem;
   --fs-400: 1.25rem;
   --fs-nav: 1.125rem;
@@ -24,6 +25,19 @@
   --bg-contact: #F9E9E9;
 
 }
+
+@media (min-width: 50em) {
+  :root {
+    --fs-tagline: 4.5rem;
+    --fs-700: 2.25rem;
+    --fs-600: 1.875rem;
+    
+    --fs-500: 1.5rem;
+    --fs-400: 1.25rem;
+    --fs-nav: 1.125rem;
+  }
+}
+
 
 /*
   ************* RESET *****************************
@@ -116,6 +130,7 @@ h1, h2 {
 h1 {
   font-size: var(--fs-600);
   line-height: 1.1;
+  color: var(--clr-brand);
 }
 
 h2 {
@@ -151,10 +166,9 @@ h3 {
   align-items: center;
 }
 
-header h1 {
-  /* font-size: var(--fs-500); */
+/* header h1 {
   color: var(--clr-brand);
-}
+} */
 
 .nav-list {
   padding: 0;
@@ -176,7 +190,7 @@ header h1 {
 .tagline-heading {
   max-width: 23ch;
   padding: 1.5rem 0;
-  font-size: 4.5rem;
+  font-size: var(--fs-tagline);
   color: var(--clr-heading-text);
 }
 
