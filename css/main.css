@@ -31,7 +31,6 @@
     --fs-tagline: 4.5rem;
     --fs-700: 2.25rem;
     --fs-600: 1.875rem;
-    
     --fs-500: 1.5rem;
     --fs-400: 1.25rem;
     --fs-nav: 1.125rem;
@@ -89,39 +88,42 @@ h6 {
   isolation: isolate;
 }
 
-
-
 /****** Global Styles ******/
 body {
   min-height: 100vh;
   min-height: 100dvh;
-
   display: grid;
   grid-template-rows: 
     auto
     1fr
     auto;
-
   font-family: var(--ff-sans);
   font-size: var(--fs-400);
   line-height: 1.6;
-
   color: var(--clr-primary-text);
 }
-
 
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1em;
   overflow: auto;
 }
+
+
+/* @media (min-width: ) {
+
+}
+
+@media (min-width: ) {
+  
+} */
 
 /* Components and Utility Classes */
 .flex { display: flex; }
 .grid { display: grid; }
 
 /* Typography */
-
 h1, h2 {
   /* margin: 0; */
   font-family: var(--ff-serif);
@@ -153,10 +155,6 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.hero-content {
-  padding: 0 1.5rem;
 }
 
 .nav-wrapper {
@@ -195,8 +193,9 @@ h3 {
 }
 
 /****** About Styles ******/
-.about .content-wrapper {
-  padding: 5rem 3rem;
+.about {
+  padding-top: 4em;
+  padding-bottom: 4em;
   flex-direction: column;
   gap: 2.125rem;
 }
@@ -210,16 +209,14 @@ h3 {
   max-width: 50ch;
 } */
 
-
-
 /****** Skill Styles ******/
-.skills {
-
+.skills-section {
   background: var(--clr-off-white);
 }
 
-.skills .content-wrapper {
-  padding: 7rem 3rem;
+.skills-content {
+  padding-top: 4em;
+  padding-bottom: 4em;
   flex-direction: column;
   align-items: center;
   gap: 4.5rem;
@@ -247,24 +244,27 @@ h3 {
   line-height: 1.8;
 }
 
-
-
 /****** Contact / Footer Styles ******/
 
 .contact {
   background-color: var(--bg-contact);
 }
 
-.contact .content-wrapper {
-  padding: 6.875rem 0;
+.footer-content {
+  padding-top: 4em;
+  padding-bottom: 4em;
   flex-direction: column;
   align-items: center;
 }
 
 .contact-image {
-  max-width: 350px;
+  max-width: 100%;
   margin-bottom: 2rem;
   border: 12px solid #fff;
+}
+
+.contact-info {
+  align-self: flex-start;
 }
 
 .contact h2 {
@@ -311,8 +311,11 @@ h3 {
   }
 
   .contact-image {
-    max-width: 45%;
+    max-width: 350px;
   }
+  /* .contact-image {
+    max-width: 45%;
+  } */
 
   .contact h2 {
     margin-top: 30px;
